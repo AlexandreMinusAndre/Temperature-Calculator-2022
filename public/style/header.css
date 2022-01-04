@@ -1,0 +1,9 @@
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    justify-content: space-between;
+    display: flex;
+}

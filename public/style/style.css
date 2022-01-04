@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i);
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--black: #1d1f20;
+	--blue: aqua;
+	--deeppink: deeppink;
+	--yellow: #fddc32;
+	--white: #fafafa;
+}
+
+body {
+	background-color: skyblue;
+	background: dodgerblue linear-gradient(45deg, aqua, dodgerblue, deeppink) fixed;
+	color: white;
+	font: normal 32px/1.6 system-ui, sans-serif;
+	text-shadow: 0 1px 1px hsl(0 0% 0% / 20%);
+	margin: 3rem;
+}
+
+main {
+	text-align: center;
+}
+
+
+input {
+	font: inherit;
+	padding: 0.2em 0.5em;
+}
+
+input[type="submit"] {
+	padding: 25px 62px;
+	border: 2px solid #000;
+	font-size: 1.3rem;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	border-radius: 2em;
+}
+
+input[type="text"] {
+	font: inherit;
+	/* padding: 0.2em 0.5em; */
+	padding: 0.5em 1em;
+	border: 2px solid #000;
+	font-size: 1.3rem;
+	background: transparent;
+	border-radius: 2em;
+}
+
+ol.gradient-list {
+	counter-reset: gradient-counter;
+	list-style: none;
+	margin: 1.1rem 0;
+  display: inline-block;
+	padding-left: 1rem;
+}
+
+ol li {
+	text-align: center;
+	  color: var(--black);
+	font-size: 18px;
+	  background: white;
+	max-width: 25rem;
+	  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+	  counter-increment: gradient-counter;
+	  margin-top: 1rem;
+	  min-height: rem; 
+	  padding: 1rem 1rem 1rem 3rem;
+	  position: relative;
+	  font-family: "Raleway", sans-serif;
+  }
+
+  ol li::before,
+  ol li::after {
+	  background: linear-gradient(45deg, var(--deeppink) 0%, var(--blue) 100%);
+	  border-radius: 1rem 1rem 0 1rem;
+	  content: "";
+	  height: 3rem;
+	  left: -1rem;
+	  overflow: hidden;
+	  position: absolute;
+	  top: -1rem;
+	  width: 2rem;
+  }
+
+  ol li::before {
+	  align-items: flex-end;
+	  content: counter(gradient-counter);
+	  color: var(--black);
+	  display: flex;
+	  font: 900 1.5em/1 "Montserrat";
+	  justify-content: flex-end;
+	  padding: 0.125em 0.25em;
+	  z-index: 1;
+  }

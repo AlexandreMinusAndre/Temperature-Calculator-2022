@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <p>This website was developped by three french back-end developper students.</p>
+
+    <p>Its use is to give the user the temperature of a previoulsy entered city.</p>
+    
+    <p>This website sends requests to three APIs :</p>
+    <ul>
+        <li><a href="https://positionstack.com/">PositionStack</a> to get the longitude and latitude of the city.</li>
+        <li><a href="https://openweathermap.org/">OpenWeatherMap</a> to get the temperature based on the longitude and latitude provided by PositionStack.</li>
+        <li><a href="https://docs.mapbox.com/playground/geocoding/">Mapbox</a> to display a list of propositions based on the user's input.</li>
+    </ul>
+</body>
+</html>
